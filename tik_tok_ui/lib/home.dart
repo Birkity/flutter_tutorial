@@ -6,7 +6,16 @@ class Home extends StatelessWidget{
             color: Colors.yellow[300],
             );
   
-  Widget get videoDescription => Expanded(child: Container(color: Colors.green[100],));
+  Widget get videoDescription => Expanded(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Container(height: 10.0, color: Colors.green[300], margin: EdgeInsets.only(top:10),),
+        Container(height: 10.0, color: Colors.green[300], margin: EdgeInsets.only(top:10),),
+        Container(height: 10.0, color: Colors.green[300], margin: EdgeInsets.only(top:10),),
+
+      ],
+    ),);
 
   Widget get actionToolbar => Container(
                 width: 100.0,
