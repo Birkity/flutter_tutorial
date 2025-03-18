@@ -12,12 +12,12 @@ class VideoDescription extends StatelessWidget{
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.start,
         children:<Widget> [
-          Text("@firstjonny", style: TextStyle(fontWeight: FontWeight.bold),),
+          Text("@firstjonny", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white), ),
           Text("Video title and some other stuff", style: TextStyle(color: Colors.grey[500]),),
           Row(
             children: [
-              Icon(Icons.music_note, size: 15.0,),
-              Text("Artist name - Album name - song", style: TextStyle(fontSize: 12.0),),
+              Icon(Icons.music_note, size: 15.0, color: Colors.white,),
+              Text("Artist name - Album name - song", style: TextStyle(fontSize: 12.0, color: Colors.white),),
             ],
             
           ),

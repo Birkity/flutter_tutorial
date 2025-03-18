@@ -21,6 +21,7 @@ class Home extends StatelessWidget{
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: Colors.black,
         body: Column(
           children:[
           topSection,

@@ -29,12 +29,29 @@ class ActionToolbar extends StatelessWidget{
       height: 60.0,
       child: Column(
         children: [
-          Icon(icon, size: 35.0, color: Colors.grey[300],),
+          Icon(icon, size: 25.0, color: Colors.grey[300],),
           Padding(
             padding: EdgeInsets.only(top: 2.0), 
             child: 
             Text(title, style: TextStyle(fontSize: 12.0),),),
         ],
+      ),
+    );
+
+  }
+
+  Widget _getFollowAction({
+    String pictureUrl
+
+  }){
+    return Container(
+      margin: EdgeInsets.symmetric(vertical: 10.0),
+      width: 60.0,
+      height: 60.0,
+      child: Stack( children: [
+        _getProfilePicture(),
+        _getPlusIcon()
+      ],
       ),
     );
 
