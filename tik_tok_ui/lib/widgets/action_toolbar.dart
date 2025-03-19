@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class ActionToolbar extends StatelessWidget{
 
@@ -59,7 +60,7 @@ static const double PlusIconSize = 20.0;
   }
 
   Widget _getFollowAction({
-    String pictureUrl
+    String? pictureUrl
 
   }){
     return Container(
@@ -74,4 +75,37 @@ static const double PlusIconSize = 20.0;
     );
 
   }
+
+  Widget _getPlusIcon() {
+   return Positioned(
+        bottom: 0,
+        left: ((ActionWidgetSize / 2) - (PlusIconSize / 2)),
+        child: Container(
+          width: PlusIconSize,  
+          height: PlusIconSize, 
+          decoration: BoxDecoration(
+          color: Color.fromARGB(255, 255, 43, 84),
+          borderRadius: BorderRadius.circular(15.0)
+          ),
+          child: Icon(Icons.add, color: Colors.white, size: 20.0, )),);
+ }
+
+  Widget _getProfilePicture() {
+   return Positioned(
+     left: (ActionWidgetSize / 2) - (ProfileImageSize / 2),
+     child: Container(
+        padding: EdgeInsets.all(1.0), 
+        height: ProfileImageSize, 
+        width: ProfileImageSize,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(ProfileImageSize / 2)
+        ),
+        child: CachedNetworkImage(
+          imageUrl: "https://secure.gravatar.com/avatar/ef4a9338dca42372f15427cdb4595ef7",
+          placeholder: (context, url) => new CircularProgressIndicator(),
+          errorWidget: (context, url, error) => new Icon(Icons.error),
+      ),
+      ));
+ }
 }
