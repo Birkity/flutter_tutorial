@@ -24,10 +24,11 @@ static const double PlusIconSize = 20.0;
   Widget build(BuildContext context){
     return Container(
       width: 100.0,
-      color: Colors.red[300],
+      color: Colors.black,
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
+          _getFollowAction(pictureUrl: "https://secure.gravatar.com/avatar/ef4a9338dca42372f15427cdb4595ef7"),
           _getSocialAction(title: '3.2m', icon: Icons.heart_broken),
           _getSocialAction(title: '16.4k', icon: Icons.chat_bubble),
           _getSocialAction(title: 'Share', icon: Icons.reply)
@@ -43,7 +44,7 @@ static const double PlusIconSize = 20.0;
     
   }){
     return Container(
-      margin: EdgeInsets.only(top: 15.0),
+      margin: EdgeInsets.only(top: 10.0),
       width: ActionWidgetSize,
       height: ActionWidgetSize,
       child: Column(
@@ -60,7 +61,7 @@ static const double PlusIconSize = 20.0;
   }
 
   Widget _getFollowAction({
-    String? pictureUrl
+    required String pictureUrl
 
   }){
     return Container(
