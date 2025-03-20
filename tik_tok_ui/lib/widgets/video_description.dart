@@ -13,7 +13,7 @@ class VideoDescription extends StatelessWidget{
         crossAxisAlignment: CrossAxisAlignment.start,
         children:<Widget> [
           Text("@firstjonny", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white), ),
-          Text("Video title and some other stuff", style: TextStyle(color: Colors.grey[500]),),
+          Text("Video title and some other stuff", style: TextStyle(color: Colors.white),),
           Row(
             children: [
               Icon(Icons.music_note, size: 15.0, color: Colors.white,),
