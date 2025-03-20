@@ -53,7 +53,7 @@ static const double PlusIconSize = 20.0;
           Padding(
             padding: EdgeInsets.only(top: 2.0), 
             child: 
-            Text(title, style: TextStyle(fontSize: 12.0),),),
+            Text(title, style: TextStyle(fontSize: 12.0, color: Colors.white),),),
         ],
       ),
     );
